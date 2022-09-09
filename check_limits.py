@@ -12,7 +12,9 @@ def is_soc_ok(soc):
   return True
 
 def is_charge_rate_ok(charge_rate):
-  return False charge_rate > 0.8 else True
+  if charge_rate > 0.8:
+    return False
+  return True
 
 def battery_is_ok(temperature, soc, charge_rate):
   messages = [
